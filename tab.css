@@ -1,0 +1,16 @@
+.tab {
+    padding: 20px;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+}
+
+.tab--hover {
+    background: rgba(76, 175, 80, 0.3)
+}
+
+.tab--selected {
+    background-color: rgba(76, 175, 80);
+}
