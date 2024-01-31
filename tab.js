@@ -11,7 +11,7 @@ tab.addEventListener("click", (event) => {
 })
 
 tab.addEventListener("mouseenter", (event) => {
-    tab.classList.toggle ('tab--hover');
+    tab.classList.add ('tab--hover');
 })
 
 tab.addEventListener("mouseleave", (event) => {
@@ -28,3 +28,13 @@ const deselect = () => {
         tab.classList.remove ('tab--selected');
     })
 }
+
+const body = document.body;
+const scroller = document.querySelector('.scroller');
+let rotateDeg = 0;
+
+body.addEventListener("wheel", (event) => {
+    if (event.deltaY > 0) {rotateDeg+=5} 
+    else {rotateDeg-=5}
+    scroller.style.transform = `rotate(${rotateDeg}deg)`;
+})
