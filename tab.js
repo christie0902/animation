@@ -1,14 +1,12 @@
 const tabs = document.querySelectorAll('.tab');
-const secondTab = document.querySelector('.second-tab');
-const thirdTab = document.querySelector('.third-tab');
 
-let selectedTab;
+// let selectedTab;
 
 tabs.forEach ((tab) => {
 tab.addEventListener("click", (event) => {
     deselect();
-    selectedTab = event.target; //or currentTarget
-    selectedTab.classList.toggle ('tab--selected');
+   tab = event.target; //or currentTarget
+    tab.classList.toggle ('tab--selected');
    
 })
 
